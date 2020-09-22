@@ -1,0 +1,68 @@
+body
+{
+    background:-moz-linear-gradient(left,blue,yellow);
+    background:-webkit-linear-gradient(left,blue,yellow);
+    background:-o-linear-gradient(left,blue,yellow);
+
+}
+
+#Calc
+{
+    margin-top: 05%;
+    margin-left: 38%;
+    margin-right: 20%;
+    
+}
+
+#champAffichage
+{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 335px;
+    height:55px;
+    background-color: rgb(248, 248, 248);
+}
+
+button
+{
+    height: 40px;
+    width:65px;
+}
+
+.ln
+{
+    width:6px;
+    text-indent: -5px;
+}
+
+.exp
+{
+    width:38px;
+    text-indent: -5px;
+    margin-left: -40px;
+}
+
+.HEURE
+{
+    width:198px;
+}
+
+.DEL
+{
+    width:132px;
+}
+
+#afficheheure
+{
+    text-align: center;
+}
+
+#fermepopup
+{
+    text-align: end;
+}
+
+#fermeboutonpopup
+{
+    width: 100px;
+}
