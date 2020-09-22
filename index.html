@@ -1,108 +1,123 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">  
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="jquery-3.4.1.js"></script>
-        <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-        <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="WinCalc.css">
-        <title> WinCalculator</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.4.1.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="WinCalc.css" />
+    <title>WinCalculator</title>
+  </head>
 
-    <body>
-        <div id="Calc">
-            <div id="champAffichage"><br/></div>
-            <table id="table">
-                <tr>
-                    <td><button class="sin btn btn-dark">sin</button></td>
-                    <td><button class="cos btn btn-dark">cos</button></td>
-                    <td><button class="tan btn btn-dark">tan</button></td>
-                    <td><button class="arcsin btn btn-dark">arcsin</button></td>
-                    <td><button class="C btn btn-dark">C</button></td>
-                </tr>
-                <tr>
-                    <td><button class="arccos btn btn-dark">arccos</button></td>
-                    <td><button class="arctan btn btn-dark">arctan</button></td>
-                    <td><button class="carre btn btn-dark">x²</button></td>
-                    <td><button class="cube btn btn-dark">x³</button></td>
-                    <td><button class="power btn btn-dark">x^y</button></td>
-                </tr>
-                <tr>
-                    <td><button class="π btn btn-dark">π</button></td>
-                    <td><button class="√ btn btn-dark">√</button></td>
-                    <td><button class="∛ btn btn-dark">∛</button></td>
-                    <td><button class="log btn btn-dark">log</button></td>
-                    <td><button class="ln btn btn-dark">ln</button></td>
-                    <td colspan="-2"><button class="exp btn btn-dark">exp</button></td>
-                </tr>
-                <tr>
-                    <td colspan="3">
-                        <button class="HEURE btn btn-warning" data-toggle="modal" data-target="#monmodal">HEURE</button>
-                        <div class="modal fade" id="monmodal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                      <p id='afficheheure'>
-                                          <script>
-                                            function showHour(){
-                                                var d = new Date();
-                                                var heure = d.getHours();
-                                                var minute = d.getMinutes();
-                                                var seconde = d.getSeconds();
-                                                var heeure = "Il est: " + heure + ":" + minute + ":" + seconde;
-                                                var accede = document.querySelector("#afficheheure");
-                                                accede.innerHTML = "<br>"+heeure;
-                                            }
-                                            setInterval(showHour, 500);
-                                          </script>
-                                      </p> 
-                                      <div id="fermepopup"> <button id="fermeboutonpopup"class="btn btn-info" data-dismiss="modal">Fermer</button> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                    
-                    </td>
+  <body>
+    <div id="Calc">
+      <div id="champAffichage"><br /></div>
+      <table id="table">
+        <tr>
+          <td><button class="sin btn btn-dark">sin</button></td>
+          <td><button class="cos btn btn-dark">cos</button></td>
+          <td><button class="tan btn btn-dark">tan</button></td>
+          <td><button class="arcsin btn btn-dark">arcsin</button></td>
+          <td><button class="C btn btn-dark">C</button></td>
+        </tr>
+        <tr>
+          <td><button class="arccos btn btn-dark">arccos</button></td>
+          <td><button class="arctan btn btn-dark">arctan</button></td>
+          <td><button class="carre btn btn-dark">x²</button></td>
+          <td><button class="cube btn btn-dark">x³</button></td>
+          <td><button class="power btn btn-dark">x^y</button></td>
+        </tr>
+        <tr>
+          <td><button class="π btn btn-dark">π</button></td>
+          <td><button class="√ btn btn-dark">√</button></td>
+          <td><button class="∛ btn btn-dark">∛</button></td>
+          <td><button class="log btn btn-dark">log</button></td>
+          <td><button class="ln btn btn-dark">ln</button></td>
+          <td colspan="-2"><button class="exp btn btn-dark">exp</button></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <button
+              class="HEURE btn btn-warning"
+              data-toggle="modal"
+              data-target="#monmodal"
+            >
+              HEURE
+            </button>
+            <div class="modal fade" id="monmodal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <p id="afficheheure">
+                      <script>
+                        function showHour() {
+                          var d = new Date();
+                          var heure = d.getHours();
+                          var minute = d.getMinutes();
+                          var seconde = d.getSeconds();
+                          var heeure =
+                            "Il est: " + heure + ":" + minute + ":" + seconde;
+                          var accede = document.querySelector("#afficheheure");
+                          accede.innerHTML = "<br>" + heeure;
+                        }
+                        setInterval(showHour, 500);
+                      </script>
+                    </p>
+                    <div id="fermepopup">
+                      <button
+                        id="fermeboutonpopup"
+                        class="btn btn-info"
+                        data-dismiss="modal"
+                      >
+                        Fermer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
 
-                    <td colspan="2"><button class="DEL btn btn-info">DEL</button></td>
-                </tr>
-                <tr>
-                    <td><button class="inverse btn btn-dark">1/x</button></td>
-                    <td><button class="inferieur btn btn-dark">(</button></td>
-                    <td><button class="superieur btn btn-dark">)</button></td>
-                    <td><button class="Mod btn btn-dark">Mod</button></td>
-                    <td><button class="÷ btn btn-dark">÷</button></td>
-                </tr>
-                <tr>
-                    <td><button class="factoriel btn btn-dark">n!</button></td>
-                    <td><button class="7 btn btn-dark">7</button></td>
-                    <td><button class="8 btn btn-dark">8</button></td>
-                    <td><button class="9 btn btn-dark">9</button></td>
-                    <td><button class="x btn btn-dark">x</button></td>
-                </tr>
-                <tr>
-                    <td><button class="nCr btn btn-dark">nCr</button></td>
-                    <td><button class="4 btn btn-dark">4</button></td>
-                    <td><button class="5 btn btn-dark">5</button></td>
-                    <td><button class="6 btn btn-dark">6</button></td>
-                    <td><button class="plus btn btn-dark">+</button></td>
-                </tr>
-                <tr>
-                    <td><button class="nPr btn btn-dark">nPr</button></td>
-                    <td><button class="1 btn btn-dark">1</button></td>
-                    <td><button class="2 btn btn-dark">2</button></td>
-                    <td><button class="3 btn btn-dark">3</button></td>
-                    <td><button class="- btn btn-dark">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="E btn btn-dark">E</button></td>
-                    <td><button class="0 btn btn-dark">0</button></td>
-                    <td><button class="• btn btn-dark">•</button></td>
-                    <td><button class="virgule btn btn-dark">,</button></td>
-                    <td><button class="egal btn btn-dark">=</button></td>
-                </tr>
-            </table>
-        </div>
-    </body>
-</html> 
+          <td colspan="2"><button class="DEL btn btn-info">DEL</button></td>
+        </tr>
+        <tr>
+          <td><button class="inverse btn btn-dark">1/x</button></td>
+          <td><button class="inferieur btn btn-dark">(</button></td>
+          <td><button class="superieur btn btn-dark">)</button></td>
+          <td><button class="Mod btn btn-dark">Mod</button></td>
+          <td><button class="÷ btn btn-dark">÷</button></td>
+        </tr>
+        <tr>
+          <td><button class="factoriel btn btn-dark">n!</button></td>
+          <td><button class="7 btn btn-dark">7</button></td>
+          <td><button class="8 btn btn-dark">8</button></td>
+          <td><button class="9 btn btn-dark">9</button></td>
+          <td><button class="x btn btn-dark">x</button></td>
+        </tr>
+        <tr>
+          <td><button class="nCr btn btn-dark">nCr</button></td>
+          <td><button class="4 btn btn-dark">4</button></td>
+          <td><button class="5 btn btn-dark">5</button></td>
+          <td><button class="6 btn btn-dark">6</button></td>
+          <td><button class="plus btn btn-dark">+</button></td>
+        </tr>
+        <tr>
+          <td><button class="nPr btn btn-dark">nPr</button></td>
+          <td><button class="1 btn btn-dark">1</button></td>
+          <td><button class="2 btn btn-dark">2</button></td>
+          <td><button class="3 btn btn-dark">3</button></td>
+          <td><button class="- btn btn-dark">-</button></td>
+        </tr>
+        <tr>
+          <td><button class="E btn btn-dark">E</button></td>
+          <td><button class="0 btn btn-dark">0</button></td>
+          <td><button class="• btn btn-dark">•</button></td>
+          <td><button class="virgule btn btn-dark">,</button></td>
+          <td><button class="egal btn btn-dark">=</button></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
